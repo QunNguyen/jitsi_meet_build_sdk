@@ -258,8 +258,7 @@ const Chat = ({
     function renderTabs() {
         return (
             <Tabs
-                // accessibilityLabel = { t(_isPollsEnabled ? 'chat.titleWithPolls' : 'chat.title') }
-                accessibilityLabel = {"qquna"}
+                accessibilityLabel = { t(_isPollsEnabled ? 'chat.titleWithPolls' : 'chat.title') }
                 onChange = { onChangeTab }
                 selected = { _isPollsTabFocused ? CHAT_TABS.POLLS : CHAT_TABS.CHAT }
                 tabs = { [ {
