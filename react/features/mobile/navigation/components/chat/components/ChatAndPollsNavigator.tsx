@@ -46,7 +46,7 @@ const ChatAndPolls = () => {
                     }
                 }}
                 name = { screen.conference.chatandpolls.tab.chat } />
-            <ChatTab.Screen
+            {/* <ChatTab.Screen
                 component = { PollsPane }
                 listeners = {{
                     tabPress: () => {
@@ -54,7 +54,7 @@ const ChatAndPolls = () => {
                         dispatch(resetNbUnreadPollsMessages);
                     }
                 }}
-                name = { screen.conference.chatandpolls.tab.polls } />
+                name = { screen.conference.chatandpolls.tab.polls } /> */}
         </ChatTab.Navigator>
     );
 };
