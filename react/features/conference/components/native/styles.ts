@@ -92,21 +92,24 @@ export default {
             marginLeft: BaseTheme.spacing[1],
             zIndex: 1,
             width: BaseTheme.spacing[7]
-        }
+        },
+        alignItems: 'center'
     },
 
     pipButton: {
         iconStyle: {
             color: BaseTheme.palette.icon01,
             padding: 12,
-            fontSize: TITLE_BAR_BUTTON_SIZE
+            fontSize: TITLE_BAR_BUTTON_SIZE,
+            transform: [{ rotate: '90deg' }],
+            backgroundColor: 'rgba(0, 0, 0, 0.5)',
+            borderRadius: 50
         },
         underlayColor: 'transparent'
     },
 
     titleBarSafeViewColor: {
         ...titleBarSafeView,
-        backgroundColor: BaseTheme.palette.uiBackground
     },
 
     titleBarSafeViewTransparent: {
@@ -155,11 +158,11 @@ export default {
     roomName: {
         color: BaseTheme.palette.text01,
         ...BaseTheme.typography.bodyShortBold,
-        paddingVertical: 6
+        paddingVertical: 6,
+        fontSize : 18,
     },
 
     roomNameView: {
-        backgroundColor: 'rgba(0,0,0,0.6)',
         borderBottomLeftRadius: 3,
         borderTopLeftRadius: 3,
         flexShrink: 1,

@@ -86,23 +86,24 @@ const styles = {
      */
     toolbox: {
         alignItems: 'center',
-        backgroundColor: BaseTheme.palette.uiBackground,
-        borderTopLeftRadius: 3,
-        borderTopRightRadius: 3,
+        backgroundColor: 'rgba(0, 0, 0, 0.5)',
         flexDirection: 'row',
-        justifyContent: 'space-between'
+        justifyContent: 'space-between',
+        borderRadius: 50,
+        paddingHorizontal: 5
     },
 
     /**
      * The style of the root/top-level container of {@link Toolbox}.
      */
     toolboxContainer: {
-        backgroundColor: BaseTheme.palette.uiBackground,
         flexDirection: 'column',
         maxWidth: 580,
         marginLeft: 'auto',
         marginRight: 'auto',
-        width: '100%'
+        width: '100%',
+        paddingHorizontal: 10,
+        marginBottom: 20
     }
 };
 
@@ -148,7 +149,8 @@ ColorSchemeRegistry.register('Toolbox', {
         iconStyle: whiteToolbarButtonIcon,
         style: {
             ...toolbarButton,
-            backgroundColor: schemeColor('hangup')
+            backgroundColor: schemeColor('hangup'),
+            borderRadius: 50
         },
         underlayColor: BaseTheme.palette.ui04
     },

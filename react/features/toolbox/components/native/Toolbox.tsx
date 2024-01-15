@@ -1,8 +1,9 @@
 import React from 'react';
-import { View, ViewStyle } from 'react-native';
+import { Text, TouchableOpacity, View, ViewStyle } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { connect } from 'react-redux';
 
+import ChatbuttonCustom from '../../../../../custom/ChatbuttonCustom';
 import { IReduxState } from '../../../app/types';
 import ColorSchemeRegistry from '../../../base/color-scheme/ColorSchemeRegistry';
 import Platform from '../../../base/react/Platform.native';
@@ -21,6 +22,7 @@ import RaiseHandButton from './RaiseHandButton';
 import ScreenSharingButton from './ScreenSharingButton';
 import VideoMuteButton from './VideoMuteButton';
 import styles from './styles';
+
 
 /**
  * The type of {@link Toolbox}'s React {@code Component} props.
@@ -92,25 +94,25 @@ function Toolbox(props: IProps) {
     return (
         <View
             style = { styles.toolboxContainer as ViewStyle }>
+            {additionalButtons.has('chat')
+                    && <ChatbuttonCustom
+                        styles = { buttonStylesBorderless }
+                        toggledStyles = { backgroundToggledStyle } />
+            }
+
             <SafeAreaView
                 accessibilityRole = 'toolbar'
-
                 // @ts-ignore
                 edges = { [ bottomEdge && 'bottom' ].filter(Boolean) }
                 pointerEvents = 'box-none'
                 style = { style as ViewStyle }>
-                {!_iAmVisitor && <AudioMuteButton
-                    styles = { buttonStylesBorderless }
-                    toggledStyles = { toggledButtonStyles } />
-                }
                 {!_iAmVisitor && <VideoMuteButton
                     styles = { buttonStylesBorderless }
                     toggledStyles = { toggledButtonStyles } />
                 }
-                {additionalButtons.has('chat')
-                    && <ChatButton
-                        styles = { buttonStylesBorderless }
-                        toggledStyles = { backgroundToggledStyle } />
+                {!_iAmVisitor && <AudioMuteButton
+                    styles = { buttonStylesBorderless }
+                    toggledStyles = { toggledButtonStyles } />
                 }
                 {!_iAmVisitor && additionalButtons.has('screensharing')
                     && <ScreenSharingButton styles = { buttonStylesBorderless } />}
@@ -126,6 +128,23 @@ function Toolbox(props: IProps) {
                     styles = { buttonStylesBorderless }
                     toggledStyles = { toggledButtonStyles } />
                 }
+
+                <TouchableOpacity
+                    onPress={() => {}}
+                    style={{
+                        backgroundColor: 'rgba(0, 145, 255, 1)',
+                        padding: 15,
+                        borderRadius: 10,
+                        alignItems:'center',
+                    }}
+                    title = 'Xác nhận'>
+                    <Text style={{
+                        color:'white',
+                        fontSize: 15,
+                        fontWeight: '700'
+                        }}> Xác nhận</Text>
+                </TouchableOpacity>
+
                 { _endConferenceSupported
                     ? <HangupMenuButton />
                     : <HangupButton

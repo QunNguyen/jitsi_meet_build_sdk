@@ -85,17 +85,17 @@ const TitleBar = (props: IProps) => {
                     </View>
                 }
                 {/* eslint-disable-next-line react/jsx-no-bind */}
-                <Labels createOnPress = { props._createOnPress } />
+                {/* <Labels createOnPress = { props._createOnPress } /> */}
+            </View>
+            {/* <View style = { styles.titleBarButtonContainer }>
+            <ToggleCameraButton styles = { styles.titleBarButton } />
             </View>
             <View style = { styles.titleBarButtonContainer }>
-                <ToggleCameraButton styles = { styles.titleBarButton } />
+            <AudioDeviceToggleButton styles = { styles.titleBarButton } />
             </View>
             <View style = { styles.titleBarButtonContainer }>
-                <AudioDeviceToggleButton styles = { styles.titleBarButton } />
-            </View>
-            <View style = { styles.titleBarButtonContainer }>
-                <ParticipantsPaneButton styles = { styles.titleBarButton } />
-            </View>
+            <ParticipantsPaneButton styles = { styles.titleBarButton } />
+            </View>  */}
         </View>
     );
 };
@@ -121,3 +121,4 @@ function _mapStateToProps(state: IReduxState) {
 }
 
 export default connect(_mapStateToProps)(TitleBar);
+

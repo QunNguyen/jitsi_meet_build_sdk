@@ -1,5 +1,5 @@
+import { Dimensions } from 'react-native';
 import BaseTheme from '../../../base/ui/components/BaseTheme.native';
-import { SMALL_THUMBNAIL_SIZE } from '../../constants';
 
 /**
  * Size for the Avatar.
@@ -110,14 +110,14 @@ export default {
         borderStyle: 'solid',
         borderWidth: 1,
         flex: 1,
-        height: SMALL_THUMBNAIL_SIZE,
         justifyContent: 'center',
         margin: 2,
-        maxHeight: SMALL_THUMBNAIL_SIZE,
-        maxWidth: SMALL_THUMBNAIL_SIZE,
+        maxHeight: Dimensions.get('window').height * 0.3,
+        maxWidth: Dimensions.get('window').width * 0.35,
         overflow: 'hidden',
         position: 'relative',
-        width: SMALL_THUMBNAIL_SIZE
+        width: Dimensions.get('window').width * 0.35,
+        height: Dimensions.get('window').height * 0.3
     },
 
     indicatorContainer: {
