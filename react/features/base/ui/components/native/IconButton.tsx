@@ -1,5 +1,5 @@
 import React from 'react';
-import { TouchableHighlight } from 'react-native';
+import { TouchableOpacity } from 'react-native';
 
 import Icon from '../../../icons/components/Icon';
 import styles from '../../../react/components/native/styles';
@@ -49,7 +49,7 @@ const IconButton: React.FC<IIconButtonProps> = ({
     }
 
     return (
-        <TouchableHighlight
+        <TouchableOpacity
             accessibilityLabel = { accessibilityLabel }
             disabled = { disabled }
             onPress = { onPress }
@@ -62,7 +62,7 @@ const IconButton: React.FC<IIconButtonProps> = ({
                 color = { color }
                 size = { 20 || size }
                 src = { src } />
-        </TouchableHighlight>
+        </TouchableOpacity>
     );
 };
 

@@ -149,7 +149,7 @@ ColorSchemeRegistry.register('Toolbox', {
         iconStyle: whiteToolbarButtonIcon,
         style: {
             ...toolbarButton,
-            backgroundColor: schemeColor('hangup'),
+            backgroundColor: 'red',
             borderRadius: 50
         },
         underlayColor: BaseTheme.palette.ui04

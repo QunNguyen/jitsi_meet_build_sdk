@@ -25,7 +25,12 @@ const HangupMenuButton = (): JSX.Element => {
             accessibilityLabel = 'toolbar.accessibilityLabel.hangup'
             onPress = { onSelect }
             src = { IconHangup }
-            type = { BUTTON_TYPES.PRIMARY } />
+            type = { BUTTON_TYPES.PRIMARY }
+            style={{
+                borderRadius: 50,
+                backgroundColor: 'red',
+            }}
+            />
     );
 };
 

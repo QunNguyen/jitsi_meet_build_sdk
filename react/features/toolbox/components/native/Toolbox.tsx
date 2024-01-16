@@ -139,14 +139,16 @@ function Toolbox(props: IProps) {
                         alignItems:'center',
                     }}
                     title = 'Xác nhận'>
-                    <Text style={{
+                    <Text style = {{
                         color:'white',
                         fontSize: 15,
                         fontWeight: '700'
-                        }}> Xác nhận</Text>
+                        }}>
+                        Xác nhận
+                    </Text>
                 </TouchableOpacity>
 
-                { _endConferenceSupported
+                {_endConferenceSupported
                     ? <HangupMenuButton />
                     : <HangupButton
                         styles = { hangupButtonStyles } />
