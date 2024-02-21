@@ -130,7 +130,7 @@ function Toolbox(props: IProps) {
                     toggledStyles = { toggledButtonStyles } />
                 }
 
-                <TouchableOpacity
+                {/* <TouchableOpacity
                     onPress={() => {}}
                     style={{
                         backgroundColor: 'rgba(0, 145, 255, 1)',
@@ -146,7 +146,7 @@ function Toolbox(props: IProps) {
                         }}>
                         Xác nhận
                     </Text>
-                </TouchableOpacity>
+                </TouchableOpacity> */}
 
                 {_endConferenceSupported
                     ? <HangupMenuButton />

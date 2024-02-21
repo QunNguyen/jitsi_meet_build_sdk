@@ -441,7 +441,6 @@ class Conference extends AbstractConference<IProps, State> {
                         _shouldDisplayTileView
                         || <>
                             <Filmstrip />
-                            { this._renderNotificationsContainer() }
                             <Toolbox />
                         </>
                     }
@@ -459,6 +458,7 @@ class Conference extends AbstractConference<IProps, State> {
                                 }
                         ]}>
                     <TitleBar _createOnPress = { this._createOnPress } />
+                    { this._renderNotificationsContainer() }
                 </SafeAreaView>
 
                 <SafeAreaView
@@ -486,7 +486,6 @@ class Conference extends AbstractConference<IProps, State> {
                 {
                     _shouldDisplayTileView
                     && <>
-                        { this._renderNotificationsContainer() }
                         <Toolbox />
                     </>
                 }

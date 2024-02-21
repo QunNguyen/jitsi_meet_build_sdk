@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { WithTranslation } from 'react-i18next';
-import { Platform } from 'react-native';
+import { Platform, StyleSheet, View } from 'react-native';
 import { Edge, SafeAreaView } from 'react-native-safe-area-context';
 import { connect } from 'react-redux';
 
@@ -190,8 +190,8 @@ class NotificationsContainer extends Component<IProps> {
             }
 
         } else {
-            notificationsContainerStyle
-                = toolboxVisible ? styles.withToolbox : styles.withoutToolbox;
+            // notificationsContainerStyle
+            //     = toolboxVisible ? styles.withToolbox : styles.withoutToolbox;
         }
 
         return (
